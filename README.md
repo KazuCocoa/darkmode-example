@@ -7,7 +7,7 @@ if the process has 'test_darkmode' process arguments.
 In `SceneDelegate.swift`
 
 ```swift
-if ProcessInfo.processInfo.arguments.contains("test_dardmode") {
+if ProcessInfo.processInfo.arguments.contains("test_darkmode") {
     window.overrideUserInterfaceStyle = .dark
 }
 ```
@@ -28,20 +28,20 @@ caps = {
     app: 'path/to/build/Build/Products/Debug-iphonesimulator/darkmode-example.app',
     deviceName: 'iPhone Xs Max',
     platformVersion: '13.1',
-    processArguments: { args: ['test_dardmode'] }
+    processArguments: { args: ['test_darkmode'] }
   }
 }
 @driver = ::Appium::Core.for(caps).start_driver
 ```
 
-## With 'processArguments: { args: ['test_dardmode'] }'
+## With 'processArguments: { args: ['test_darkmode'] }'
 
 ```
 > @driver.execute_script('mobile: activeAppInfo', {})
-#=> {"processArguments"=>{"env"=>{}, "args"=>["test_dardmode"]}, "name"=>"", "pid"=>27048, "bundleId"=>"com.kazucocoa.darkmode-example"}
+#=> {"processArguments"=>{"env"=>{}, "args"=>["test_darkmode"]}, "name"=>"", "pid"=>27048, "bundleId"=>"com.kazucocoa.darkmode-example"}
 ```
 
-## Without 'processArguments: { args: ['test_dardmode'] }'
+## Without 'processArguments: { args: ['test_darkmode'] }'
 
 ```
 > @driver.execute_script('mobile: activeAppInfo', {})

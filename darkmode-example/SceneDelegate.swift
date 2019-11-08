@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
 
-            if ProcessInfo.processInfo.arguments.contains("test_dardmode") {
+            if ProcessInfo.processInfo.arguments.contains("test_darkmode") {
                 window.overrideUserInterfaceStyle = .dark
             }
 
