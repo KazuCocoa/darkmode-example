@@ -12,7 +12,7 @@ if ProcessInfo.processInfo.arguments.contains("test_darkmode") {
 }
 ```
 
-# Build
+# Build this repository
 
 ```
 xcodebuild -sdk iphonesimulator -scheme darkmode-example -derivedDataPath ./build
@@ -20,6 +20,7 @@ xcodebuild -sdk iphonesimulator -scheme darkmode-example -derivedDataPath ./buil
 
 # Run
 
+## capability
 ```ruby
 caps = {
   desired_capability: {
@@ -34,18 +35,20 @@ caps = {
 @driver = ::Appium::Core.for(caps).start_driver
 ```
 
-## With 'processArguments: { args: ['test_darkmode'] }'
+## 1. With 'processArguments: { args: ['test_darkmode'] }'
 
 ```
 > @driver.execute_script('mobile: activeAppInfo', {})
 #=> {"processArguments"=>{"env"=>{}, "args"=>["test_darkmode"]}, "name"=>"", "pid"=>27048, "bundleId"=>"com.kazucocoa.darkmode-example"}
 ```
 
-## Without 'processArguments: { args: ['test_darkmode'] }'
+## 2. Without 'processArguments: { args: ['test_darkmode'] }'
 
 ```
 > @driver.execute_script('mobile: activeAppInfo', {})
 #=> {"processArguments"=>{"env"=>{}, "args"=>[]}, "name"=>"", "pid"=>28154, "bundleId"=>"com.kazucocoa.darkmode-example"}
 ```
 
-# License
+# image
+
+<img src="https://user-images.githubusercontent.com/5511591/67107509-8f09fc80-f207-11e9-93b2-ca4fa1540695.png" width=400>
